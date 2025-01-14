@@ -1,5 +1,5 @@
-let preprocessor = 'sass', // Preprocessor (sass, less, styl); 'sass' also work with the Scss syntax in blocks/ folder.
-		fileswatch   = 'html,htm,txt,json,md,woff2' // List of files extensions for watching & hard reload
+// const preprocessor = 'sass'; // Preprocessor (sass, less, styl); 'sass' also work with the Scss syntax in blocks/ folder.
+const fileswatch   = 'html,htm,txt,json,md,woff2'; // List of files extensions for watching & hard reload
 
 import pkg from 'gulp'
 const { src, dest, parallel, series, watch } = pkg
@@ -14,10 +14,10 @@ import gulpSass      from 'gulp-sass'
 import * as dartSass from 'sass'
 const  sass          = gulpSass(dartSass)
 import sassglob      from 'gulp-sass-glob'
-import less          from 'gulp-less'
-import lessglob      from 'gulp-less-glob'
-import styl          from 'gulp-stylus'
-import stylglob      from 'gulp-noop'
+// import less          from 'gulp-less'
+// import lessglob      from 'gulp-less-glob'
+// import styl          from 'gulp-stylus'
+// import stylglob      from 'gulp-noop'
 import postCss       from 'gulp-postcss'
 import cssnano       from 'cssnano'
 import autoprefixer  from 'autoprefixer'
@@ -81,9 +81,13 @@ function scripts() {
 }
 
 function styles() {
-	return src([`app/styles/${preprocessor}/*.*`, `!app/styles/${preprocessor}/_*.*`])
-		.pipe(eval(`${preprocessor}glob`)())
-		.pipe(eval(preprocessor)({ 'include css': true }))
+	return src([
+		`app/styles/*.*`,
+		`app/components/*.*`,
+		`!app/styles/_*.*`
+	])
+		.pipe(eval(`sassglob`)())
+		.pipe(eval(sass)({ 'include css': true }))
 		.pipe(postCss([
 			autoprefixer({ grid: 'autoplace' }),
 			cssnano({ preset: ['default', { discardComments: { removeAll: true } }] })
@@ -138,7 +142,7 @@ function deploy() {
 }
 
 function startwatch() {
-	watch([`app/styles/${preprocessor}/**/*`], { usePolling: true }, styles)
+	watch(['app/styles/**/*', 'app/components/**/*'], { usePolling: true }, styles)
 	watch(['app/js/**/*.js', '!app/js/**/*.min.js'], { usePolling: true }, scripts)
 	watch(['app/images/src/**/*'], { usePolling: true }, images)
 	watch([`app/**/*.{${fileswatch}}`], { usePolling: true }).on('change', browserSync.reload)
