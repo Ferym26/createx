@@ -75,7 +75,7 @@ function scripts() {
 		}, webpack)).on('error', function handleError() {
 			this.emit('end')
 		})
-		.pipe(concat('app.min.js'))
+		// .pipe(concat('app.min.js'))
 		.pipe(dest('app/js'))
 		.pipe(browserSync.stream())
 }
@@ -87,7 +87,11 @@ function styles() {
 		`!app/styles/_*.*`
 	])
 		.pipe(eval(`sassglob`)())
-		.pipe(eval(sass)({ 'include css': true }))
+		.pipe(eval(sass)({
+			'include css': true,
+			quietDeps: true,
+			silenceDeprecations: ['legacy-js-api', 'mixed-decls', 'color-functions', 'import'],
+		}))
 		.pipe(postCss([
 			autoprefixer({ grid: 'autoplace' }),
 			cssnano({ preset: ['default', { discardComments: { removeAll: true } }] })
@@ -98,10 +102,10 @@ function styles() {
 }
 
 function images() {
-	return src(['app/images/src/**/*'], { encoding: false })
-		.pipe(changed('app/images/dist'))
+	return src(['app/images/**/*'], { encoding: false })
+		.pipe(changed('app/images/'))
 		.pipe(imagemin())
-		.pipe(dest('app/images/dist'))
+		.pipe(dest('app/images/'))
 		.pipe(browserSync.stream())
 }
 
@@ -109,7 +113,7 @@ function buildcopy() {
 	return src([
 		'{app/js,app/css}/*.min.*',
 		'app/images/**/*.*',
-		'!app/images/src/**/*',
+		// '!app/images/**/*',
 		'app/fonts/**/*'
 	], { base: 'app/', encoding: false })
 	.pipe(dest('dist'))
@@ -144,7 +148,7 @@ function deploy() {
 function startwatch() {
 	watch(['app/styles/**/*', 'app/components/**/*'], { usePolling: true }, styles)
 	watch(['app/js/**/*.js', '!app/js/**/*.min.js'], { usePolling: true }, scripts)
-	watch(['app/images/src/**/*'], { usePolling: true }, images)
+	// watch(['app/images/**/*'], { usePolling: true }, images)
 	watch([`app/**/*.{${fileswatch}}`], { usePolling: true }).on('change', browserSync.reload)
 }
 
