@@ -3,6 +3,9 @@
   --stb-black: #000000;
   --stb-white: #ffffff;
 
+  // White opacity
+  --stb-white-60: #ffffff99;
+
   // Gray shades
   --stb-gray-300: #e5e8ed;
   --stb-gray-400: #d7dadd;
@@ -16,6 +19,6 @@
   // Background colors
   --stb-primary: var(--stb-orange-100);
   --stb-secondary: var(--stb-gray-300);
-  
+
   --stb-hero-grey: #1e212c99;
 }
