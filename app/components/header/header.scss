@@ -1,10 +1,15 @@
 .header {
-  display: flex;
-  column-gap: 60px;
-  align-items: center;
-  margin: 20px auto;
-  background-color: transparent;
-  border: 1px solid #000;
+  position: fixed;
+  inset-inline: 0;
+  top: 0;
+
+  &__section {
+    display: flex;
+    column-gap: 60px;
+    align-items: center;
+    margin: 20px auto;
+    background-color: transparent;
+  }
 
   &__navigation {
     display: flex;
@@ -13,10 +18,9 @@
     width: 100%;
   }
 
-  //   &--opacue {
-  // background-color: #fff;
-  // background-color: #c94d4d;
-  //   }
+  &--opacue {
+    background-color: var(--stb-white);
+  }
 }
 
 .nav {
