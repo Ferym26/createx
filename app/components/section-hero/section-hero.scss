@@ -1,0 +1,22 @@
+.section {
+  padding: 220px 20px 120px;
+  background-color: #1e212c99;
+  border: 1px solid #000;
+
+  &__content {
+    max-width: 580px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__description {
+    margin-bottom: 60px;
+  }
+}
+
+.btn-group {
+  display: flex;
+  gap: 24px;
+}
