@@ -3,71 +3,71 @@
   inset-inline: 0;
   top: 0;
 
-  &__section {
-    display: flex;
-    column-gap: 60px;
-    align-items: center;
-    margin: 20px auto;
-    background-color: transparent;
-  }
+  // &__section {
+  //   display: flex;
+  //   column-gap: 60px;
+  //   align-items: center;
+  //   margin: 20px auto;
+  //   background-color: transparent;
+  // }
 
-  &__navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
+  // &__navigation {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  //   width: 100%;
+  // }
 
   &--opacue {
     background-color: var(--stb-white);
   }
 }
 
-.nav {
-  &__list {
-    display: flex;
-    column-gap: 40px;
-    justify-content: center;
-  }
+// .nav {
+//   &__list {
+//     display: flex;
+//     column-gap: 40px;
+//     justify-content: center;
+//   }
 
-  &__link {
-    text-decoration: none;
-    color: var(--stb-gray-800);
-    tab-size: 16px;
-    line-height: 1.6;
-    font-weight: 700;
-  }
+//   &__link {
+//     text-decoration: none;
+//     color: var(--stb-gray-800);
+//     tab-size: 16px;
+//     line-height: 1.6;
+//     font-weight: 700;
+//   }
 
-  &__contact {
-    display: flex;
-    gap: 36px;
-  }
-}
+//   &__contact {
+//     display: flex;
+//     gap: 36px;
+//   }
+// }
 
-.contact {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  text-decoration: none;
+// .contact {
+//   display: flex;
+//   gap: 12px;
+//   align-items: center;
+//   text-decoration: none;
 
-  &__image {
-    fill: var(--stb-primary);
-    width: 40px;
-    height: 40px;
-  }
+//   &__image {
+//     fill: var(--stb-primary);
+//     width: 40px;
+//     height: 40px;
+//   }
 
-  &__title {
-    margin: 0;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--stb-gray-800);
-  }
-  &__details {
-    margin: 0;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.5;
-    color: var(--stb-gray-900);
-  }
-}
+//   &__title {
+//     margin: 0;
+//     font-weight: 700;
+//     font-size: 14px;
+//     line-height: 1.5;
+//     color: var(--stb-gray-800);
+//   }
+//   &__details {
+//     margin: 0;
+//     font-weight: 400;
+//     font-size: 18px;
+//     line-height: 1.5;
+//     color: var(--stb-gray-900);
+//   }
+// }
