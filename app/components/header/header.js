@@ -5,9 +5,10 @@ function slideNav() {
   burgerBtn.classList.toggle("active");
   if (burgerBtn.classList.contains("active")) {
     sidebar.style.transform = "translateX(250px)";
-  } else {
-    sidebar.style.transform = "translateX(-250px)";
   }
+  //   else {
+  //     sidebar.style.transform = "translateX(-250px)";
+  //   }
 }
 
 function closeNav() {
