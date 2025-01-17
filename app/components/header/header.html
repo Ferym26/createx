@@ -1,6 +1,6 @@
 <header class="header header--opacue">
   <div class="container header__section">
-    <div class="logo">
+    <div class="logo header__logo">
       <img
         class="logo__image"
         src="/images/logo.svg"
@@ -9,9 +9,14 @@
         height="22"
       />
     </div>
-    <button class="navbar-button" type="button">
+    <button
+      class="navbar-button"
+      id="burgerBtn"
+      type="button"
+      onclick="slideNav()"
+    >
       <span>
-        <svg class="icon">
+        <svg class="icon navbar-button__icon">
           <use
             xlink:href="/images/sprite.svg#burger-menu"
             width="40"
@@ -21,8 +26,8 @@
       </span>
     </button>
     <!--  -->
-    <div class="sidebar">
-      <div class="logo">
+    <div class="sidebar" id="sidebarMob">
+      <!-- <div class="logo">
         <img
           class="logo__image"
           src="/images/logo.svg"
@@ -30,8 +35,18 @@
           width="130"
           height="22"
         />
-      </div>
+      </div> -->
       <div class="sidebar__body">
+        <button
+          type="button"
+          class="sidebar__close"
+          id="closeBtn"
+          onclick="closeNav()"
+        >
+          <svg class="icon sidebar__btn" width="24" height="24">
+            <use xlink:href="/images/sprite.svg#cross-icon"></use>
+          </svg>
+        </button>
         <ul class="sidebar__list">
           <li class="sidebar__item">
             <a class="nav__link active" href="#"> Home </a>
@@ -51,8 +66,29 @@
           <li class="sidebar__item">
             <a class="nav__link" href="#">Contacts</a>
           </li>
+          <li class="sidebar__item">
+            <a class="nav__link" href="#">Other</a>
+          </li>
+          <li class="sidebar__item">
+            <a class="nav__link" href="#">Other</a>
+          </li>
+          <li class="sidebar__item">
+            <a class="nav__link" href="#">Other</a>
+          </li>
+          <li class="sidebar__item">
+            <a class="nav__link" href="#">Other</a>
+          </li>
+          <li class="sidebar__item">
+            <a class="nav__link" href="#">Other</a>
+          </li>
+          <li class="sidebar__item">
+            <a class="nav__link" href="#">Other</a>
+          </li>
+          <li class="sidebar__item">
+            <a class="nav__link" href="#">Other</a>
+          </li>
         </ul>
-        <div class="contacts">
+        <div class="sidebar__contacts">
           <a class="contact" href="tel:4055550128" title="(405) 555-0128">
             <svg class="icon contact__image" width="40" height="40">
               <use xlink:href="/images/sprite.svg#phone-icon"></use>
@@ -129,3 +165,5 @@
     </nav>
   </div>
 </header>
+
+<!-- <script src="header.js"></script> -->
