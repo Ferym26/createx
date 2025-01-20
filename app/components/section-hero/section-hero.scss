@@ -1,14 +1,16 @@
 .section {
-  // padding: 220px 20px 120px;
-  padding: 150px 10px;
-  background-color: #1e212c99;
-  background-image: image-set(
-    url("/images/bg-hero-image@1x.jpg") 1x,
-    url("/images/bg-hero-image@2x.jpg") 2x
-  );
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  &__hero {
+    // padding: 220px 20px 120px;
+    padding: 150px 10px;
+    background-color: #1e212c99;
+    background-image: image-set(
+      url("/images/bg-hero-image@1x.jpg") 1x,
+      url("/images/bg-hero-image@2x.jpg") 2x
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 
   &__content {
     max-width: 580px;
