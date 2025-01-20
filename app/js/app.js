@@ -3,7 +3,9 @@ import Collapse from 'bootstrap/js/dist/collapse.js';
 import Modal from 'bootstrap/js/dist/modal.js';
 
 import { header } from '../components/header/header.js'
+import { hero } from '../components/section-hero/script.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 	header();
+	hero.init();
 })
