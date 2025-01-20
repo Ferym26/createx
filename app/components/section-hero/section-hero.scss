@@ -9,14 +9,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  // border: 1px solid #000;
 
   &__content {
     max-width: 580px;
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    border: 1px solid #d92828;
   }
 
   &__title {
@@ -24,16 +22,70 @@
   }
 
   &__description {
-    margin-bottom: 34px;
+    margin-bottom: 60px;
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
 
 .slider {
   position: relative;
+  padding-bottom: 200px;
 
-  // &__btn {
-  //   border: 3px solid #000;
-  // }
+  &__indicators {
+    position: absolute;
+    bottom: 0;
+    inset-inline: 0;
+    display: flex;
+    justify-content: center;
+    counter-reset: buttons;
+  }
+
+  &__indicator-btn {
+    all: unset;
+    max-width: 100px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.5;
+    text-align-last: left;
+    color: var(--stb-white-60);
+    // border-bottom: 2px solid var(--stb-white-30);
+    transition: color 0.3s ease-in-out;
+
+    &.active,
+    &:hover {
+      color: var(--stb-white);
+      // border-bottom: 2px solid var(--stb-white);
+
+      &::after {
+        background-color: var(--stb-white);
+      }
+    }
+
+    &::before {
+      counter-increment: buttons;
+      content: "0" counter(buttons);
+    }
+
+    &::after {
+      display: block;
+      width: 100%;
+      height: 2px;
+      margin-top: 12px;
+      background-color: var(--stb-white-30);
+      transition: background-color 0.3s ease-in-out;
+      content: "";
+    }
+  }
+
+  &__btn {
+    max-width: 50px;
+    width: 100%;
+  }
 
   &__btn-icon {
     position: absolute;
@@ -79,7 +131,16 @@
   .section__slider {
     margin: 0;
     width: 100%;
-    border: 2px solid #33b742;
+    padding-bottom: 236px;
+  }
+
+  .slider__indicators {
+    justify-content: start;
+  }
+
+  .slider__indicator-btn {
+    max-width: 178px;
+    width: 100%;
   }
 
   .section__content {

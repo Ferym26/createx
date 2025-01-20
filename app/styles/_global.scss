@@ -45,6 +45,10 @@ body {
   border-radius: 4px;
   cursor: pointer;
 
+  // &:hover {
+  //   background-color: var(--stb-orange-300);
+  // }
+
   &--primary {
     background-color: var(--stb-orange-100);
     color: var(--stb-white);
