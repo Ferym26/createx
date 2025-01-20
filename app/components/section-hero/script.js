@@ -9,7 +9,7 @@ export const hero = {
 	slider() {
 		const swiper = new Swiper('.js_hero-swiper', {
 			modules: [Navigation],
-			loop: true,
+			loop: false,
 			slidesPerView: 1,
 			spaceBetween: 0,
 			watchOverflow: true,
@@ -33,6 +33,14 @@ export const hero = {
 			},
 			on: {
 				// events
+				slideChange(instance) {
+					let activeIndex = instance.activeIndex;
+					const paginationArr = document.querySelectorAll('.slider__indicator-btn');
+					paginationArr.forEach((el) => {
+						el.classList.remove('active');
+					});
+					paginationArr[activeIndex].classList.add('active');
+				}
 			},
 		});
 	},
