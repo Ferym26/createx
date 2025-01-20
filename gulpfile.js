@@ -147,7 +147,7 @@ function deploy() {
 
 function startwatch() {
 	watch(['app/styles/**/*', 'app/components/**/*'], { usePolling: true }, styles)
-	watch(['app/js/**/*.js', '!app/js/**/*.min.js'], { usePolling: true }, scripts)
+	watch(['app/**/*.js', '!app/js/**/*.min.js'], { usePolling: true }, scripts)
 	// watch(['app/images/**/*'], { usePolling: true }, images)
 	watch([`app/**/*.{${fileswatch}}`], { usePolling: true }).on('change', browserSync.reload)
 }
