@@ -14,13 +14,13 @@ export const hero = {
       spaceBetween: 0,
       watchOverflow: true,
       watchSlidesVisibility: true,
-      autoplay: {
-        delay: 3000,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
+      //   autoplay: {
+      //     delay: 3000,
+      //   },
+      //   pagination: {
+      //     el: ".swiper-pagination",
+      //     clickable: true,
+      //   },
       navigation: {
         nextEl: ".js_hero-slider-next",
         prevEl: ".js_hero-slider-prev",
@@ -45,8 +45,8 @@ export const hero = {
         },
       },
     });
-    setTimeout(() => {
-      swiper.slideTo(3);
-    }, 3000);
+    // setTimeout(() => {
+    //   swiper.slideTo(3);
+    // }, 3000);
   },
 };

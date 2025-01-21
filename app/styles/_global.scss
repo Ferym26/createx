@@ -14,56 +14,67 @@ body {
   // border: 1px solid #e52f2f;
 }
 
+.section {
+  &__hero {
+    padding: 150px 10px 120px;
+    border: 1px solid #000;
+
+    @include desktop {
+      padding: 270px 20px 120px;
+    }
+  }
+}
+
 .title {
   font-weight: 700;
   line-height: 1.3;
-  // text-transform: uppercase;
+  color: var(--stb-gray-900);
 
   &--light {
     color: var(--stb-white);
   }
 
-  // &--l {
-  //   font-size: 24px;
+  &--l {
+    font-size: 24px;
 
-  //   @include desktop {
-  //     font-size: 72px;
-  //   }
-  // }
+    @include desktop {
+      font-size: 72px;
+    }
+  }
 
-  // &--m {
-  //   font-size: 20px;
+  &--m {
+    font-size: 20px;
 
-  //   @include desktop {
-  //     font-size: 46px;
-  //   }
-  // }
+    @include desktop {
+      font-size: 46px;
+    }
+  }
 }
 
 .description {
   font-weight: 400;
-  // font-size: 12px;
   line-height: 1.5;
+  color: var(--stb-gray-700);
 
   &--light {
     color: var(--stb-white);
   }
 
-  // &--l {
-  //   font-size: 14px;
+  &--l {
+    font-size: 16px;
 
-  //   @include desktop {
-  //     font-size: 20px;
-  //   }
-  // }
+    @include desktop {
+      font-size: 20px;
+    }
+  }
 
-  // &--m {
-  //   font-size: 12px;
+  &--m {
+    font-size: 14px;
 
-  //   @include desktop {
-  //     font-size: 18px;
-  //   }
-  // }
+    @include desktop {
+      font-size: 18px;
+    }
+  }
 }
 
 .button {
