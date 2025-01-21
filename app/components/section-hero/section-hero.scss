@@ -152,7 +152,7 @@
 
     &::after {
       background-color: var(--stb-white);
-      animation: slide-in 1s linear;
+      animation: slide-in 0.5s linear both;
     }
   }
 
