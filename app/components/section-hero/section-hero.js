@@ -17,10 +17,10 @@ export const hero = {
       //   autoplay: {
       //     delay: 3000,
       //   },
-      //   pagination: {
-      //     el: ".swiper-pagination",
-      //     clickable: true,
-      //   },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
       navigation: {
         nextEl: ".js_hero-slider-next",
         prevEl: ".js_hero-slider-prev",
@@ -33,16 +33,14 @@ export const hero = {
       },
       on: {
         // events
-        slideChange(instance) {
-          let activeIndex = instance.activeIndex;
-          const paginationArr = document.querySelectorAll(
-            ".slider__indicator-btn"
-          );
-          paginationArr.forEach((el) => {
-            el.classList.remove("active");
-          });
-          paginationArr[activeIndex].classList.add("active");
-        },
+        // slideChange(instance) {
+        //   let activeIndex = instance.activeIndex;
+        //   const paginationArr = document.querySelectorAll(".swiper-pagination");
+        //   paginationArr.forEach((el) => {
+        //     // el.classList.remove("active");
+        //   });
+        //   paginationArr[activeIndex].classList.add("active");
+        // },
       },
     });
     // setTimeout(() => {
