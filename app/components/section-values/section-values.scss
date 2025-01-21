@@ -1,0 +1,40 @@
+.values {
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__description {
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    max-width: 285px;
+    width: 100%;
+    text-align: center;
+    border: none;
+  }
+}
+
+.card {
+  display: grid;
+  justify-items: center;
+
+  &__image {
+    margin-bottom: 24px;
+  }
+  &__title {
+    margin-bottom: 8px;
+  }
+}
+
+.divider {
+  width: 1px;
+  height: 188px;
+  background-color: rgb(218, 219, 221);
+}

@@ -8,6 +8,10 @@
   }
 
   &__video {
+    min-width: 320px;
+    width: 100%;
+    min-height: 200px;
+    aspect-ratio: 1.6;
     margin-bottom: 60px;
     border-radius: 4px;
     filter: opacity(60%) brightness(0.6);
