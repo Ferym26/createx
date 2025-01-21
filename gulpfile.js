@@ -82,9 +82,7 @@ function scripts() {
 
 function styles() {
 	return src([
-		`app/styles/*.*`,
-		`app/components/*.*`,
-		`!app/styles/_*.*`
+		`app/styles/main.sass`,
 	])
 		.pipe(eval(`sassglob`)())
 		.pipe(eval(sass)({
