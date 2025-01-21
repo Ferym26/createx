@@ -32,6 +32,11 @@
 .nav {
   display: none;
 
+  @include tablet {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
   &__list {
     display: flex;
   }
@@ -47,6 +52,10 @@
     line-height: 1.6;
     font-weight: 700;
 
+    @include tablet {
+      text-wrap: nowrap;
+    }
+
     &.active {
       color: var(--stb-primary);
     }
@@ -60,6 +69,14 @@
   &__contact {
     display: flex;
     gap: 36px;
+
+    @include tablet {
+      gap: 10px;
+    }
+
+    @include desktop {
+      gap: 36px;
+    }
   }
 }
 
@@ -89,6 +106,16 @@
     line-height: 1.5;
     color: var(--stb-gray-900);
   }
+
+  &__info {
+    @include tablet {
+      display: none;
+    }
+
+    @include desktop {
+      display: block;
+    }
+  }
 }
 
 .navbar-button {
@@ -102,6 +129,10 @@
   border-radius: 6px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+
+  @include tablet {
+    display: none;
+  }
 
   &__icon {
     width: 40px;
@@ -127,6 +158,10 @@
   padding: 20px;
   background-color: var(--stb-white);
   transition: transform 0.5s linear;
+
+  @include tablet {
+    display: none;
+  }
 
   &__body {
     position: relative;
@@ -170,40 +205,23 @@
 }
 
 // min-width 768
-@include tablet {
-  .navbar-button {
-    display: none;
-  }
+// @include tablet {
+// .nav-link {
+//   text-wrap: nowrap;
+// }
 
-  .sidebar {
-    display: none;
-  }
-
-  .nav {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-
-  .nav-link {
-    text-wrap: nowrap;
-  }
-
-  .nav__contact {
-    gap: 10px;
-  }
-
-  .contact__info {
-    display: none;
-  }
-}
+// .contact__info {
+//   display: none;
+// }
+// }
 
 // min-width 1280
-@include desktop {
-  .nav__contact {
-    gap: 36px;
-  }
+// @include desktop {
+//   .nav__contact {
+//     gap: 36px;
+//   }
 
-  .contact__info {
-    display: block;
-  }
-}
+//   .contact__info {
+//     display: block;
+//   }
+// }

@@ -14,9 +14,9 @@ export const hero = {
       spaceBetween: 0,
       watchOverflow: true,
       watchSlidesVisibility: true,
-      //   autoplay: {
-      //     delay: 3000,
-      //   },
+      autoplay: {
+        delay: 3000,
+      },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
