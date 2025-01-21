@@ -1,15 +1,15 @@
-.section {
-  .section__promo {
-    border: 4px solid #6153d0;
-    padding: 120px 0 60px;
-    text-align: center;
+.promo {
+  &__title {
+    margin-bottom: 24px;
   }
 
-  //   &__title {
-  //     .title--m {
-  //       font-size: 46px;
-  //       font-weight: 700;
-  //       line-height: 1.3;
-  //     }
-  //   }
+  &__description {
+    margin-bottom: 60px;
+  }
+
+  &__video {
+    margin-bottom: 60px;
+    border-radius: 4px;
+    filter: opacity(60%) brightness(0.6);
+  }
 }

@@ -23,6 +23,15 @@ body {
       padding: 270px 20px 120px;
     }
   }
+
+  &__promo {
+    padding: 120px 0 0px;
+    text-align: center;
+
+    // @include desktop {
+    //   padding: 200px 0 60px;
+    // }
+  }
 }
 
 .title {
@@ -191,14 +200,4 @@ body {
 .icon {
   width: inherit;
   height: inherit;
-}
-
-@include desktop {
-  .title {
-    font-size: 72px;
-  }
-
-  .description {
-    font-size: 20px;
-  }
 }
