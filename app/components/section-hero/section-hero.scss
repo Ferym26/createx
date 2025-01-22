@@ -1,4 +1,5 @@
-.hero {
+.section-hero {
+  padding: 150px 10px 120px;
   background-color: #727584;
   background-image: image-set(
     url("/images/bg-hero-image@1x.jpg") 1x,
@@ -8,15 +9,11 @@
   background-size: cover;
   background-position: center;
 
-  &__slider {
-    @include desktop {
-      margin: 0;
-      width: 100%;
-      padding-bottom: 236px;
-    }
+  @include desktop {
+    padding: 270px 20px 120px;
   }
 
-  &__content {
+  &__body {
     max-width: 580px;
     width: 100%;
     margin: 0 auto;
@@ -28,27 +25,24 @@
     }
   }
 
-  &__title {
-    margin-bottom: 24px;
-  }
-
   &__description {
-    margin-bottom: 60px;
     display: -webkit-box;
     line-clamp: 3;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-
-    @include desktop {
-      margin-bottom: 60px;
-    }
   }
 }
 
 .slider {
   position: relative;
   padding-bottom: 200px;
+
+  @include desktop {
+    margin: 0;
+    width: 100%;
+    padding-bottom: 236px;
+  }
 
   &__indicators {
     position: absolute;
@@ -60,6 +54,56 @@
 
     @include desktop {
       justify-content: start;
+    }
+
+    .swiper-pagination-bullet {
+      all: unset;
+      max-width: 100px;
+      width: 100%;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.5;
+      text-align-last: left;
+      color: var(--stb-white-60);
+      transition: color 0.3s ease-in-out;
+
+      @include desktop {
+        max-width: 178px;
+      }
+
+      &:hover {
+        color: var(--stb-white);
+        cursor: pointer;
+
+        &::after {
+          background-color: var(--stb-white);
+          animation: slide-in 0.5s linear both;
+        }
+      }
+
+      &::before {
+        counter-increment: buttons;
+        content: "0" counter(buttons);
+      }
+
+      &::after {
+        display: block;
+        width: 100%;
+        height: 2px;
+        margin-top: 12px;
+        background-color: var(--stb-white-30);
+        transition: background-color 0.3s ease-in-out;
+        content: "";
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      color: var(--stb-white);
+      cursor: pointer;
+
+      &::after {
+        background-color: var(--stb-white);
+      }
     }
   }
 
@@ -128,56 +172,6 @@
 
   &__icon-rt {
     rotate: 90deg;
-  }
-}
-
-.swiper-pagination-bullet {
-  all: unset;
-  max-width: 100px;
-  width: 100%;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 1.5;
-  text-align-last: left;
-  color: var(--stb-white-60);
-  transition: color 0.3s ease-in-out;
-
-  @include desktop {
-    max-width: 178px;
-  }
-
-  &:hover {
-    color: var(--stb-white);
-    cursor: pointer;
-
-    &::after {
-      background-color: var(--stb-white);
-      animation: slide-in 0.5s linear both;
-    }
-  }
-
-  &::before {
-    counter-increment: buttons;
-    content: "0" counter(buttons);
-  }
-
-  &::after {
-    display: block;
-    width: 100%;
-    height: 2px;
-    margin-top: 12px;
-    background-color: var(--stb-white-30);
-    transition: background-color 0.3s ease-in-out;
-    content: "";
-  }
-}
-
-.swiper-pagination-bullet-active {
-  color: var(--stb-white);
-  cursor: pointer;
-
-  &::after {
-    background-color: var(--stb-white);
   }
 }
 
