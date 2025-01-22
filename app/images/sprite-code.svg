@@ -65,3 +65,7 @@
 <svg class="icon">
   <use xlink:href="#youtube-icon"></use>
 </svg>
+
+<svg class="icon">
+  <use xlink:href="#video-play-icon"></use>
+</svg>
