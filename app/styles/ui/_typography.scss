@@ -4,7 +4,6 @@
   margin-bottom: 60px;
 
   &__header {
-    // margin-bottom: 24px;
     font-weight: 700;
     color: var(--stb-gray-900);
   }
@@ -97,5 +96,28 @@
     //     font-size: 16px;
     //   }
     // }
+  }
+
+  &--card {
+    gap: 8px;
+    margin-bottom: 0;
+
+    .section-title__header {
+      font-size: 16px;
+      line-height: 1.5;
+
+      @include desktop {
+        font-size: 20px;
+      }
+    }
+
+    .section-title__text {
+      font-size: 12px;
+      line-height: 1.6;
+
+      @include desktop {
+        font-size: 16px;
+      }
+    }
   }
 }

@@ -1,11 +1,5 @@
-.promo {
-  &__title {
-    margin-bottom: 24px;
-  }
-
-  &__description {
-    margin-bottom: 60px;
-  }
+.section-promo {
+  padding: 120px 0 60px;
 
   &__play {
     position: relative;
@@ -13,7 +7,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 60px;
     border-radius: 4px;
   }
 }
