@@ -1,11 +1,49 @@
-<section class="section section__enquire container">
-  <div class="enquire">
-    <h2 class="enquire__title">Want to know more? Ask us a question:</h2>
-    <form action="submit">
-      <input type="text" name="" id="" />
-      <input type="tel" name="" id="" />
-      <input type="text" name="" id="" />
-      <button>Send</button>
-    </form>
+<section class="section section-enquire">
+  <div class="container">
+    <div class="section-enquire__form-container">
+      <div class="section-enquire__title">
+        Want to know more? Ask us a question:
+      </div>
+      <form action="submit" class="section-enquire__form enquire-form">
+        <div class="enquire-form__item section-enquire__input-item">
+          <label class="enquire-form__label" for="fullname">Name</label>
+          <input
+            class="enquire-form__input"
+            type="text"
+            name="fullname"
+            id="fullname"
+            placeholder="Your name"
+          />
+        </div>
+        <div class="enquire-form__item section-enquire__input-item">
+          <label class="enquire-form__label" for="mobile">Phone</label>
+          <input
+            class="enquire-form__input"
+            type="tel"
+            name="mobile"
+            id="mobile"
+            placeholder="Your phone"
+          />
+        </div>
+        <div class="enquire-form__item section-enquire__textarea-item">
+          <label class="enquire-form__label" for="message">Message</label>
+          <textarea
+            class="enquire-form__textarea"
+            type="text"
+            name="message"
+            id="message"
+            rows="1"
+            placeholder="Your message"
+          ></textarea>
+        </div>
+
+        <button
+          class="enquire-form__button button button--primary button--m"
+          type="submit"
+        >
+          Send
+        </button>
+      </form>
+    </div>
   </div>
 </section>
