@@ -55,14 +55,18 @@
       display: none;
     }
 
-    .burger-icon {
-      fill: var(--stb-burger-icon-color);
-    }
+    // .burger-icon {
+    //   fill: var(--stb-burger-icon-color);
+    // }
 
     &:hover {
       --stb-burger-icon-color: var(--stb-white);
       background-color: var(--stb-gray-800);
     }
+  }
+
+  &__burger-icon {
+    fill: var(--stb-burger-icon-color);
   }
 
   &__nav-list {
