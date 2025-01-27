@@ -1,28 +1,32 @@
 .section-projects {
   padding-block: 120px;
 
+  &__body {
+    position: relative;
+    // border: 1px solid #000;
+  }
+
   &__title {
     max-width: 700px;
     width: 100%;
+    // border: 1px solid #000;
   }
 
   &__btn-group {
-    border: 1px solid #000;
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: end;
+    // border: 1px solid #000;
   }
 
-  &__left-btn {
-    padding: 12px;
-    border: none;
-    // background-color: transparent;
-    background-color: var(--stb-primary);
-    border-radius: 50%;
-  }
-
-  &__right-btn {
-    padding: 12px;
-    border: none;
-    // background-color: transparent;
-    background-color: var(--stb-primary);
-    border-radius: 50%;
+  &__list {
+    overflow-x: scroll;
+    display: flex;
+    gap: 30px;
+    align-items: center;
   }
 }

@@ -29,6 +29,7 @@
 
     &:hover {
       background-color: var(--stb-orange-100);
+      color: var(--stb-white);
     }
   }
 
@@ -106,5 +107,34 @@
     font-size: 12px;
     line-height: 3;
     letter-spacing: 0.5px;
+  }
+}
+
+.arrow-btn {
+  --stb-arrow-icon-color: var(--stb-gray-800);
+
+  padding: 12px;
+  border: none;
+  background-color: transparent;
+  // background-color: var(--stb-primary);
+
+  border-radius: 50%;
+
+  &:hover {
+    --stb-arrow-icon-color: var(--stb-white);
+
+    background-color: var(--stb-primary);
+  }
+
+  &--left {
+    rotate: -90deg;
+  }
+
+  &--right {
+    rotate: 90deg;
+  }
+
+  &__icon {
+    fill: var(--stb-arrow-icon-color);
   }
 }
