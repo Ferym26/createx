@@ -1,5 +1,5 @@
 .section-services {
-  padding-top: 220px;
+  padding-block: 220px 80px;
   background-image: url("/images/bg-services-image@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,23 +12,23 @@
     flex-wrap: wrap;
   }
 
-  &__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    padding-block: 80px;
-    max-width: 652px;
-    width: 100%;
-    text-align: center;
-  }
+  // &__link {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   gap: 40px;
+  //   flex-wrap: wrap;
+  //   margin: 0 auto;
+  //   // padding-block: 80px;
+  //   // max-width: 652px;
+  //   width: 100%;
+  //   text-align: center;
+  // }
 
-  &__link-text {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 1.5;
-    color: var(--stb-gray-900);
-  }
+  // &__link-text {
+  //   font-weight: 700;
+  //   font-size: 28px;
+  //   line-height: 1.5;
+  //   color: var(--stb-gray-900);
+  // }
 }
