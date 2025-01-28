@@ -10,8 +10,7 @@
 
   &:hover {
     .project-card__card-content {
-      transform: translateY(0px);
-      // animation: slide-up 0.3s ease-in-out alternate both;
+      transform: translateY(0);
     }
   }
 
