@@ -1,8 +1,17 @@
 .section-projects {
-  padding-block: 120px;
+  padding-block: 60px;
+
+  @include desktop {
+    padding-block: 120px;
+  }
 
   &__body {
     position: relative;
+    text-align: center;
+
+    @include desktop {
+      text-align: start;
+    }
   }
 
   &__title {
@@ -11,13 +20,23 @@
   }
 
   &__btn-group {
-    position: absolute;
-    top: 90px;
-    right: 20px;
+    position: relative;
+    width: 100%;
     display: flex;
     gap: 12px;
     align-items: center;
-    justify-content: end;
+    justify-content: space-between;
+
+    @include tablet {
+      position: absolute;
+      top: -10px;
+      right: 20px;
+      justify-content: end;
+    }
+
+    @include desktop {
+      top: 80px;
+    }
   }
 
   &__list {

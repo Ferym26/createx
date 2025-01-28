@@ -25,4 +25,25 @@
       color: var(--stb-gray-600);
     }
   }
+
+  &__input {
+    &:hover {
+      border: 1px solid rgba(255, 90, 48, 0.4);
+      box-shadow: 0 12px 10px -6px rgba(255, 90, 48, 0.1);
+    }
+
+    &:focus {
+      border: 1px solid rgba(255, 90, 48, 0.4);
+      outline: 1px solid rgba(255, 90, 48, 0.4);
+      box-shadow: 0 12px 10px -6px rgba(255, 90, 48, 0.1);
+    }
+
+    &:valid:not(:placeholder-shown) {
+      border: 1px solid var(---input-error);
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      border: 1px solid var(--input-success);
+    }
+  }
 }

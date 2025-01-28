@@ -14,18 +14,6 @@ body {
   // border: 1px solid #e52f2f;
 }
 
-.section {
-  &__promo,
-  &__values {
-    padding-top: 120px;
-    text-align: center;
-
-    // @include desktop {
-    //   padding: 200px 0 60px;
-    // }
-  }
-}
-
 .icon {
   width: inherit;
   height: inherit;

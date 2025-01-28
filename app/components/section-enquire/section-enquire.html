@@ -4,6 +4,7 @@
       <div class="section-enquire__title">
         Want to know more? Ask us a question:
       </div>
+
       <form action="submit" class="section-enquire__form enquire-form">
         <div class="enquire-form__item section-enquire__input-item">
           <label class="enquire-form__label" for="fullname">Name</label>
@@ -12,6 +13,7 @@
             type="text"
             name="fullname"
             id="fullname"
+            required
             placeholder="Your name"
           />
         </div>
@@ -22,19 +24,23 @@
             type="tel"
             name="mobile"
             id="mobile"
+            required
+            title="Should match format XXX-XXX-XXXX"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
             placeholder="Your phone"
           />
         </div>
-        <div class="enquire-form__item section-enquire__textarea-item">
+
+        <div class="enquire-form__item section-enquire__message-item">
           <label class="enquire-form__label" for="message">Message</label>
-          <textarea
-            class="enquire-form__textarea"
+          <input
+            class="enquire-form__input"
             type="text"
             name="message"
             id="message"
-            rows="1"
+            required
             placeholder="Your message"
-          ></textarea>
+          ></input>
         </div>
 
         <button

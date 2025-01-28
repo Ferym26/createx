@@ -1,5 +1,5 @@
 .section-hero {
-  padding: 150px 10px 120px;
+  padding: 150px 10px 60px;
   background-color: #727584;
   background-image: image-set(
     url("/images/bg-hero-image@1x.jpg") 1x,
@@ -36,7 +36,7 @@
 
 .slider {
   position: relative;
-  padding-bottom: 200px;
+  padding-bottom: 160px;
 
   @include desktop {
     margin: 0;
