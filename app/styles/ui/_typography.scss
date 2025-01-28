@@ -157,9 +157,13 @@
   gap: 40px;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding-top: 80px;
+  padding-top: 40px;
   width: 100%;
   text-align: center;
+
+  @include desktop {
+    padding-top: 80px;
+  }
 
   &__text {
     font-weight: 700;

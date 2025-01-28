@@ -1,9 +1,13 @@
 .section-services {
-  padding-block: 220px 80px;
+  padding-block: 160px 40px;
   background-image: url("/images/bg-services-image@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @include desktop {
+    padding-block: 220px 80px;
+  }
 
   &__list {
     display: flex;
@@ -11,24 +15,4 @@
     gap: 30px;
     flex-wrap: wrap;
   }
-
-  // &__link {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   gap: 40px;
-  //   flex-wrap: wrap;
-  //   margin: 0 auto;
-  //   // padding-block: 80px;
-  //   // max-width: 652px;
-  //   width: 100%;
-  //   text-align: center;
-  // }
-
-  // &__link-text {
-  //   font-weight: 700;
-  //   font-size: 28px;
-  //   line-height: 1.5;
-  //   color: var(--stb-gray-900);
-  // }
 }
