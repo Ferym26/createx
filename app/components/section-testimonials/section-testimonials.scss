@@ -1,0 +1,75 @@
+.section-testimonials {
+  padding-block: 80px 120px;
+  background-color: var(--stb-gray-200);
+  //   border: 1px solid #000;
+
+  &__client-list {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 170px;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    // border: 1px solid #000;
+  }
+
+  &__content-body {
+    max-width: 600px;
+    width: 100%;
+  }
+
+  &__card {
+    display: grid;
+    gap: 24px;
+    // border: 1px solid #000;
+  }
+
+  &__profile-image {
+    border-radius: 50%;
+  }
+
+  &__card-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--stb-gray-800);
+  }
+
+  &__card-footer {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  &__profile {
+    display: grid;
+    gap: 4px;
+  }
+
+  &__card-name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--stb-gray-900);
+  }
+
+  &__card-title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--stb-gray-700);
+  }
+
+  &__content-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+}
