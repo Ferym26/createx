@@ -1,3 +1,43 @@
+import Swiper from "swiper";
+import { Navigation } from "swiper/modules";
+
+export const projectSlider = {
+  init() {
+    this.slider();
+  },
+
+  slider() {
+    const swiper = new Swiper(".js_card-swiper", {
+      modules: [Navigation],
+      loop: false,
+      slidesPerView: 3,
+      spaceBetween: 10,
+      watchOverflow: true,
+      watchSlidesVisibility: true,
+      navigation: {
+        nextEl: ".js_card-next",
+        prevEl: ".js_card-prev",
+      },
+      // centeredSlides: true,
+      // centeredSlidesBounds: true,
+      // centerInsufficientSlides: true,
+      breakpoints: {
+        1280: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        360: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+      },
+    });
+  },
+};
+
 export const projectCards = () => {
   let cardData = [
     {

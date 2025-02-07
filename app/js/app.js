@@ -6,6 +6,7 @@ import { header } from "../components/header/header.js";
 import { hero } from "../components/section-hero/section-hero.js";
 import { youtube } from "../components/section-promo/section-promo.js";
 import { cards } from "../components/section-services/section-services.js";
+import { projectSlider } from "../components/section-projects/section-projects.js";
 import { projectCards } from "../components/section-projects/section-projects.js";
 // import { cards } from "../blocks/card-services/card-services.js";
 
@@ -14,5 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
   hero.init();
   youtube();
   cards();
+  projectSlider.init();
   projectCards();
 });
