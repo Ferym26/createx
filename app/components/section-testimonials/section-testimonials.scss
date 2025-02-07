@@ -1,13 +1,17 @@
 .section-testimonials {
   padding-block: 80px 120px;
   background-color: var(--stb-gray-200);
-  //   border: 1px solid #000;
 
   &__client-list {
+    overflow-x: auto;
     display: flex;
     gap: 20px;
     justify-content: space-between;
     margin-bottom: 170px;
+  }
+
+  &__client-item {
+    flex-shrink: 0;
   }
 
   &__content {
@@ -15,18 +19,23 @@
     display: flex;
     gap: 20px;
     justify-content: space-between;
-    // border: 1px solid #000;
   }
 
   &__content-body {
-    max-width: 600px;
     width: 100%;
+
+    @include tablet {
+      max-width: 400px;
+    }
+
+    @include desktop {
+      max-width: 600px;
+    }
   }
 
   &__card {
     display: grid;
     gap: 24px;
-    // border: 1px solid #000;
   }
 
   &__profile-image {
@@ -66,10 +75,28 @@
   }
 
   &__content-image {
-    position: absolute;
-    top: 0;
-    right: 0;
+    display: none;
+    position: relative;
+    width: 300px;
+    aspect-ratio: 0.9;
     border-radius: 4px;
     overflow: hidden;
+
+    @include tablet {
+      display: block;
+    }
+
+    @include tablet-l {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 495px;
+    }
+  }
+
+  &__content-img {
+    width: 100%;
+    height: 100%;
   }
 }
