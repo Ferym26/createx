@@ -1,13 +1,21 @@
 .section-testimonials {
-  padding-block: 80px 120px;
+  padding-block: 40px 60px;
   background-color: var(--stb-gray-200);
+
+  @include desktop {
+    padding-block: 80px 120px;
+  }
 
   &__client-list {
     overflow-x: auto;
     display: flex;
     gap: 20px;
     justify-content: space-between;
-    margin-bottom: 170px;
+    margin-bottom: 70px;
+
+    @include desktop {
+      margin-bottom: 170px;
+    }
   }
 
   &__client-item {
