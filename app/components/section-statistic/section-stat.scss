@@ -1,3 +1,6 @@
+@import "../../styles/ui/decorations";
+@import "../../styles/animations";
+
 .section-stat {
   padding-block: 180px 120px;
 
@@ -15,15 +18,38 @@
     justify-content: center;
     text-align: center;
     flex-shrink: 0;
-    border: 1px solid #000;
   }
 
   &__item-number {
-    padding: 50px 30px;
-    max-width: 148px;
-    width: 100%;
-    border: 6px solid #bdaaaa;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 148px;
+    height: 148px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.5;
+    color: var(--stb-gray-900);
+    background: var(--stb-accent-border);
+    background-size: 148px;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 100%;
+
+    &::after {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 148px;
+      height: 148px;
+      background: var(--stb-accent-border-completed);
+      background-size: 148px;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 100%;
+      content: "";
+    }
   }
 
   &__item-text {
