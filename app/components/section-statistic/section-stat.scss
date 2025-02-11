@@ -1,3 +1,35 @@
 .section-stat {
   padding-block: 180px 120px;
+
+  &__list {
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    display: grid;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0;
+    border: 1px solid #000;
+  }
+
+  &__item-number {
+    padding: 50px 30px;
+    max-width: 148px;
+    width: 100%;
+    border: 6px solid #bdaaaa;
+    border-radius: 100%;
+  }
+
+  &__item-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--stb-gray-900);
+  }
 }
