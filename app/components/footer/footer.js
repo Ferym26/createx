@@ -1,5 +1,11 @@
 export const pageUp = () => {
-  document.querySelector("scrollup-button").addEventListener("click", () => {
-    window.scroll(0, 0);
-  });
+  const scrollUpButton = document.querySelector(".scrollup-button");
+
+  if (scrollUpButton) {
+    scrollUpButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+      });
+    });
+  }
 };
