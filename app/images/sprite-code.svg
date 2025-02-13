@@ -31,6 +31,10 @@
 </svg>
 
 <svg class="icon">
+  <use xlink:href="#down-chevron-icon"></use>
+</svg>
+
+<svg class="icon">
   <use xlink:href="#clock-icon"></use>
 </svg>
 

@@ -8,7 +8,7 @@ import { youtube } from "../components/section-promo/section-promo.js";
 import { cards } from "../components/section-services/section-services.js";
 import { projectSlider } from "../components/section-projects/section-projects.js";
 import { projectCards } from "../components/section-projects/section-projects.js";
-// import { cards } from "../blocks/card-services/card-services.js";
+import { pageUp } from "../components/footer/footer.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   header();
@@ -17,4 +17,5 @@ document.addEventListener("DOMContentLoaded", () => {
   cards();
   projectSlider.init();
   projectCards();
+  pageUp();
 });

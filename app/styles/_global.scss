@@ -1,5 +1,10 @@
 @import "mixins";
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   min-width: 360px;

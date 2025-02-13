@@ -138,3 +138,10 @@
     fill: var(--stb-arrow-icon-color);
   }
 }
+
+.arrow-btn-square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
