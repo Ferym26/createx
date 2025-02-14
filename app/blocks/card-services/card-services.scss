@@ -1,12 +1,11 @@
 .card-services {
   --stb-card-icon-fill: var(--stb-orange-100);
   --stb-card-text-color: var(--stb-gray-900);
+  --stb-card-bg-color: var(--stb-white);
 
   flex-shrink: 0;
-  padding-block: 80px;
   max-width: 285px;
   width: 100%;
-  background-color: var(--stb-white);
   border-radius: 4px;
   border: 1px solid var(--stb-gray-300);
   box-shadow: var(--stb-shadow-2);
@@ -14,9 +13,25 @@
   transition: 0.3s ease-in-out;
 
   &__body {
+    position: relative;
+  }
+
+  &__image {
+    position: relative;
+    inset: 0;
+  }
+
+  &__content-wrapper {
+    position: absolute;
+    inset: 0;
+  }
+
+  &__content {
     display: grid;
     gap: 24px;
     justify-items: center;
+    padding-block: 88px;
+    background-color: var(--stb-card-bg-color);
   }
 
   &__icon {
@@ -35,9 +50,9 @@
   &:hover {
     --stb-card-icon-fill: var(--stb-white);
     --stb-card-text-color: var(--stb-white);
+    --stb-card-bg-color: var(--stb-black-60);
 
     border: 1px solid transparent;
-    background-color: var(--stb-gray-600);
     box-shadow: var(--stb-shadow-3);
   }
 }
