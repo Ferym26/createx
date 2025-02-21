@@ -1,0 +1,8 @@
+.section-benefits {
+  padding-block: 60px;
+  background-color: var(--stb-gray-900);
+
+  @include desktop {
+    padding-block: 80px 120px;
+  }
+}

@@ -11,10 +11,18 @@
   &__header {
     font-weight: 700;
     color: var(--stb-gray-900);
+
+    &--light {
+      color: var(--stb-white);
+    }
   }
   &__text {
     font-weight: 400;
     color: var(--stb-gray-700);
+
+    &--light {
+      color: var(--stb-white-60);
+    }
   }
 
   &--light {
