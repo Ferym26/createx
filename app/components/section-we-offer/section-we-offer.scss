@@ -1,11 +1,20 @@
 .section-we-offer {
-  padding-block: 120px 60px;
+  padding-block: 60px;
+
+  @include desktop {
+    padding-block: 120px 60px;
+  }
 
   &__body {
     display: flex;
+    flex-direction: column;
     gap: 20px;
     justify-content: space-between;
     align-items: center;
+
+    @include desktop {
+      flex-direction: row;
+    }
   }
 
   &__image {
@@ -33,7 +42,7 @@
 
   &__title {
     font-weight: 700;
-    font-size: 28px;
+    font-size: 20px;
     line-height: 1.5;
     color: var(--stb-gray-900);
     list-style: none;
@@ -44,6 +53,10 @@
       top: 3px;
       left: 0;
       content: url("/images/icons-color/plus-color-icon.svg");
+    }
+
+    @include tablet {
+      font-size: 28px;
     }
   }
 
@@ -59,8 +72,12 @@
   &__text {
     margin-top: 12px;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.6;
     color: var(--stb-gray-700);
+
+    @include tablet {
+      font-size: 16px;
+    }
   }
 }

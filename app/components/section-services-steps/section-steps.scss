@@ -1,8 +1,13 @@
 .section-steps {
-  padding-block: 120px;
+  padding-block: 20px 60px;
+
+  @include desktop {
+    padding-block: 120px;
+  }
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     counter-reset: list-item;
   }

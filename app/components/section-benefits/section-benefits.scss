@@ -1,8 +1,21 @@
 .section-benefits {
+  position: relative;
   padding-block: 60px;
   background-color: var(--stb-gray-900);
 
   @include desktop {
-    padding-block: 80px 120px;
+    padding-block: 80px 126px;
+  }
+
+  &__button {
+    position: absolute;
+    bottom: -26px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+
+    @include tablet-l {
+      max-width: 300px;
+    }
   }
 }
