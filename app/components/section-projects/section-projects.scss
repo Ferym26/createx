@@ -6,12 +6,17 @@
   }
 
   &__body {
-    position: relative;
     text-align: center;
 
     @include desktop {
       text-align: start;
     }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__title {
@@ -20,27 +25,15 @@
   }
 
   &__btn-group {
-    position: relative;
-    top: -10px;
-    width: 100%;
     display: flex;
     gap: 12px;
     align-items: center;
     justify-content: space-between;
-
-    @include tablet {
-      position: absolute;
-      right: 20px;
-      justify-content: end;
-    }
-
-    @include desktop {
-      top: 80px;
-    }
   }
 
   &__list {
     display: flex;
+    gap: 20px;
     justify-content: start;
     justify-items: center;
     align-items: center;

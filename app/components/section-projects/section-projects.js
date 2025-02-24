@@ -72,9 +72,9 @@ export const projectCards = () => {
     },
   ];
 
-  const cardImage = document.querySelectorAll(".project-card__image");
-  const cardHeader = document.querySelectorAll(".project-card__header");
-  const cardText = document.querySelectorAll(".project-card__text");
+  const cardImage = document.querySelectorAll(".card-constructions__image");
+  const cardHeader = document.querySelectorAll(".card-constructions__header");
+  const cardText = document.querySelectorAll(".card-constructions__text");
 
   if (cardImage && cardHeader && cardText) {
     cardData.forEach((card, index) => {
