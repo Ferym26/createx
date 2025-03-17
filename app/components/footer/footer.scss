@@ -89,26 +89,14 @@
   &__copyright {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: end;
     gap: 20px;
     margin-top: 60px;
-  }
 
-  &__scrollup {
-    display: flex;
-    gap: 16px;
-    align-items: end;
-    margin-left: auto;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.5;
-    text-transform: uppercase;
-  }
-
-  &__scrollup-icon {
-    fill: var(--stb-white);
-    transform: rotate(180deg);
+    @include tablet {
+      justify-content: space-between;
+    }
   }
 }
 

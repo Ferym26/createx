@@ -1,0 +1,16 @@
+.scrollup {
+  display: flex;
+  gap: 16px;
+  align-items: end;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--stb-white);
+  background-color: var(--stb-gray-900);
+  text-transform: uppercase;
+
+  &__icon {
+    fill: var(--stb-white);
+    transform: rotate(180deg);
+  }
+}
